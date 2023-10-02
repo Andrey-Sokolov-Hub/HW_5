@@ -2,3 +2,12 @@
 и возводит число А в целую степень B с помощью рекурсии.
 """
 
+def recApowB(a, b):
+    if b == 0:
+        return 1
+    return a * recApowB(a, b - 1)
+
+a = int(input('Введите число а: '))
+b = int(input('Введите число b: '))
+
+print('Число а в степени b:', recApowB(a, b))
